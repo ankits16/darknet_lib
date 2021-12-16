@@ -2,7 +2,7 @@ from setuptools import setup
 from setuptools.command.build_ext import build_ext
 from setuptools.command.build_py import build_py
 from setuptools import setup, find_packages
-
+import os
 class Build(build_ext):
  """Customized setuptools build command - builds protos on build."""
  def run(self):
@@ -20,8 +20,8 @@ class Build(build_ext):
 setup(
  name='ar_darknet_lib',
  version='1.0',
- description='Darknet linb for inference',
- packages=find_packages(include=['src', 'commons']),
+ description='Darknet lib for inference',
+ packages=find_packages(where='src'),
  # packages=['src/commons'],
  # package_dir={'': 'src'},
  # packages=find_packages(where='src'),
