@@ -10,9 +10,11 @@ import sys
 class Build(build_ext):
  """Customized setuptools build command - builds protos on build."""
  def run(self):
+     build_ext_command = self.distribution.get_command_obj("build_ext")
+     build_ext_command.debug = 1
      protoc_command = ["make"]
      # protoc_command = ["echo **************** ankit"]
-     # os.chdir('./src/darknet')
+     os.chdir('./src/darknet')
      os.system('echo **************** ankit')
      if subprocess.call(protoc_command) != 0:
          sys.exit(-1)
