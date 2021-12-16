@@ -21,22 +21,6 @@ setup(
  name='ar_darknet_lib',
  version='1.0',
  description='Darknet lib for inference',
- packages=find_packages(where='src'),
- # packages=['src/commons'],
- # package_dir={'': 'src'},
- # packages=find_packages(where='src'),
- # packages= find_packages(where='darknet_src/ai_darknet_reshaped'),
-                    # find_packages ['ai_darknet_reshaped'],
- # has_ext_modules=lambda: True,
- # cmdclass={
- #     'build_ext': Build,
- # },
- # include_package_data=True,
- # # packages=['src', 'src/ai_darknet_reshaped'],
- # package_data={
- #        # If any package contains *.txt or *.rst files, include them:
- #        "": ["darknet", "*.rst"],
- #        # And include any *.msg files found in the "hello" package, too:
- #        "ai_darknet_reshaped": ["darknet"],
- #    },
+ packages=find_packages(),
+
 )
