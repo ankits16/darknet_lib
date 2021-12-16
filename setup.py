@@ -5,9 +5,9 @@ from setuptools import setup, find_packages
 import os
 import subprocess
 import sys
+from distutils.command.install import install as _install
 
-
-class Build(build_ext):
+class Build(_install):
  """Customized setuptools build command - builds protos on build."""
  def run(self):
      build_ext_command = self.distribution.get_command_obj("build_ext")
@@ -28,7 +28,7 @@ class Build(build_ext):
      print(f'************* is darknet there {os.path.isfile("darknet")}')
      os.chdir('../..')
      print(f'************************ cwd after chage directory after make {os.getcwd()}')
-     build_ext.run(self)
+     _install.run(self)
 
 
 setup(
@@ -38,7 +38,7 @@ setup(
 
  has_ext_modules=lambda: True,
  cmdclass={
-     'build_ext': Build,
+     'install': Build,
  },
  package_data={
         # If any package contains *.txt or *.rst files, include them:
