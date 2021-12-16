@@ -18,12 +18,12 @@ class Build(build_ext):
      # protoc_command = ["echo **************** ankit"]
      build_dir = os.path.realpath(self.build_lib)
      root_dir = os.path.dirname(os.path.realpath(__file__))
-     print(f'<<<<<<<<<<<<<<<<< build dir {build_dir}')
-     print(f'<<<<<<<<<<<<<<<<< start root_dir dir {root_dir}')
+     print(f'<<<<<<<<<<<<<<<<< root_dir dir {root_dir}')
+     print(f'<<<<<<<<<<<<<<<<< start build_dir dir {build_dir}')
      # os.path.join(root_dir, 'ai_darknet_lib', 'darknet_alex')
-     for file in os.listdir(os.path.join(root_dir, 'ai_darknet_lib', 'darknet_alex')):
+     for file in os.listdir(os.path.join(build_dir, 'ai_darknet_lib', 'darknet_alex')):
          print(f'<<<<<<<<<<<<<<<<<<<<<<<< {file}')
-     print(f'<<<<<<<<<<<<<<<<< end root_dir dir {root_dir}')
+     print(f'<<<<<<<<<<<<<<<<< end build_dir dir {build_dir}')
      print(f'************************ cwd  before make {os.getcwd()}')
      os.chdir('./ai_darknet_lib/darknet_alex')
      # build/lib/src/darknet
