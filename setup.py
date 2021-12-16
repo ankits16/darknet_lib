@@ -21,7 +21,7 @@ setup(
  name='ar_darknet_lib',
  version='1.0',
  description='Darknet linb for inference',
- packages=find_packages(include=['src', 'src/commons']),
+ packages=find_packages(include=['src', 'commons']),
  # packages=['src/commons'],
  # package_dir={'': 'src'},
  # packages=find_packages(where='src'),
