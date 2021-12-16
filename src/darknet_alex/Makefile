@@ -59,7 +59,7 @@ OS := $(shell uname)
 
 
 VPATH=./src/
-EXEC=darknet
+EXEC=darknet_compiled
 OBJDIR=./obj/
 
 ifeq ($(LIBSO), 1)
