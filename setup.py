@@ -24,7 +24,7 @@ class Build(build_ext):
      os.system('echo **************** ankit test')
      if subprocess.call(protoc_command) != 0:
          sys.exit(-1)
-     os.chdir('.')
+     os.chdir('../..')
      os.system('echo **************** ankit pwd after make')
      os.system('pwd')
      os.system('echo **************** ankit pwd after make')
