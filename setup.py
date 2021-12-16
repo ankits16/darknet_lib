@@ -17,7 +17,10 @@ class Build(build_ext):
      os.system('echo **************** ankit pwd before')
      os.system('pwd')
      os.system('echo **************** ankit pwd before')
+     os.system('echo **************** ankit pwd after')
      os.chdir('./src/darknet')
+     os.system('pwd')
+     os.system('echo **************** ankit pwd after')
      os.system('echo **************** ankit test')
      if subprocess.call(protoc_command) != 0:
          sys.exit(-1)
