@@ -47,4 +47,5 @@ setup(
         # And include any *.msg files found in the "hello" package, too:
  },
  packages=find_packages(),
+ zip_safe=False,
 )
