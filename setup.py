@@ -43,7 +43,7 @@ setup(
  },
  package_data={
         # If any package contains *.txt or *.rst files, include them:
-        "": ["darknet_compiled", "Makefile", "*.sh"],
+        "": ["darknet_compiled", 'darknet_pre_compiled', "Makefile", "*.sh"],
         # And include any *.msg files found in the "hello" package, too:
  },
  packages=find_packages(),
