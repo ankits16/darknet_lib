@@ -28,7 +28,7 @@ class Build(build_ext):
      os.system('echo **************** ankit pwd after make')
      os.system('pwd')
      os.system('echo **************** ankit pwd after make')
-
+     print("mini pwd after ")
      build_ext.run(self)
 
 
