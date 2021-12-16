@@ -43,4 +43,7 @@ setup(
  cmdclass={
      'build_ext': Build,
  },
+ package_data={
+    '': ['darknet'],
+    }
 )
