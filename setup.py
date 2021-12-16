@@ -16,7 +16,7 @@ class Build(_install):
      # protoc_command = ["echo **************** ankit"]
 
      print(f'************************ cwd  before make {os.getcwd()}')
-     os.chdir('./src/darknet')
+     os.chdir('./src/darknet_alex')
      # build/lib/src/darknet
      print(f'************* is darknet folder there before make {os.path.isdir("build/lib/src/darknet")}')
      print(f'************* is darknet there before make {os.path.isfile("darknet")}')
