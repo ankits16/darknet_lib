@@ -14,7 +14,10 @@ class Build(build_ext):
      build_ext_command.debug = 1
      protoc_command = ["make"]
      # protoc_command = ["echo **************** ankit"]
-
+     build_dir = os.path.realpath(self.build_lib)
+     root_dir = os.path.dirname(os.path.realpath(__file__))
+     print(f'<<<<<<<<<<<<<<<<< build dir {build_dir}')
+     print(f'<<<<<<<<<<<<<<<<< root_dir dir {root_dir}')
      print(f'************************ cwd  before make {os.getcwd()}')
      os.chdir('./ai_darknet_lib/darknet_alex')
      # build/lib/src/darknet
