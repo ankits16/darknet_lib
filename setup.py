@@ -26,6 +26,7 @@ setup(
  version='1.0',
  description='Darknet lib for inference',
  packages=find_packages(),
+ has_ext_modules=lambda: True,
  cmdclass={
      'build_ext': Build,
  },
