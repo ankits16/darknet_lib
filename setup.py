@@ -41,7 +41,7 @@ setup(
  name='ar_darknet_lib',
  version='1.0',
  description='Darknet lib for inference',
- packages=find_packages(),
+
  has_ext_modules=lambda: True,
  cmdclass={
      'build_ext': Build,
@@ -51,5 +51,6 @@ setup(
         "": ["darknet", "Makefile", "*.sh"],
         # And include any *.msg files found in the "hello" package, too:
         "darknet": ["*.sh"],
- }
+ },
+ packages=find_packages(),
 )
