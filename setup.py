@@ -17,7 +17,6 @@ class Build(_install):
 
      print(f'************************ cwd  before make {os.getcwd()}')
      os.chdir('./src/darknet')
-     os.system('pwd')
      # build/lib/src/darknet
      print(f'************* is darknet folder there before make {os.path.isdir("build/lib/src/darknet")}')
      print(f'************* is darknet there before make {os.path.isfile("darknet")}')
@@ -26,6 +25,8 @@ class Build(_install):
          sys.exit(-1)
      print(f'************************ cwd before chage directory after make {os.getcwd()}')
      print(f'************* is darknet there {os.path.isfile("darknet")}')
+     for file in os.listdir(os.getcwd()):
+         print(f'<<<<<<<<<<<<<<<<<<<<<<<< {file}')
      os.chdir('../..')
      print(f'************************ cwd after chage directory after make {os.getcwd()}')
      _install.run(self)
