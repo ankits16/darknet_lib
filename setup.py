@@ -18,7 +18,7 @@ class Build(build_ext):
      print(f'************************ cwd  before make {os.getcwd()}')
      os.chdir('./src/darknet_alex')
      # build/lib/src/darknet
-     print(f'************* is darknet folder there before make {os.path.isdir("build/lib/src/darknet")}')
+     print(f'************* is darknet folder there before make {os.path.isdir(" src/darknet_alex/")}')
      print(f'************* is darknet there before make {os.path.isfile("darknet")}')
      print(f'************************ cwd after chage directory before make {os.getcwd()}')
      if subprocess.call(protoc_command) != 0:
