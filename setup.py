@@ -44,6 +44,6 @@ setup(
      'build_ext': Build,
  },
  package_data={
-    '': ['darknet'],
+    'darknet': ['darknet'],
     }
 )
