@@ -24,11 +24,13 @@ class Build(build_ext):
      os.system('echo **************** ankit test')
      if subprocess.call(protoc_command) != 0:
          sys.exit(-1)
+
+     print(f'************* is darknet there {os.path.isfile("darknet")}')
      os.chdir('../..')
      os.system('echo **************** ankit pwd after make')
      os.system('pwd')
      os.system('echo **************** ankit pwd after make')
-     print("mini pwd after ")
+     print("************* mini pwd after ")
      build_ext.run(self)
 
 
