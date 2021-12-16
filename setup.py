@@ -17,7 +17,11 @@ class Build(build_ext):
      build_dir = os.path.realpath(self.build_lib)
      root_dir = os.path.dirname(os.path.realpath(__file__))
      print(f'<<<<<<<<<<<<<<<<< build dir {build_dir}')
-     print(f'<<<<<<<<<<<<<<<<< root_dir dir {root_dir}')
+     print(f'<<<<<<<<<<<<<<<<< start root_dir dir {root_dir}')
+     for file in os.listdir(root_dir):
+         print(f'<<<<<<<<<<<<<<<<<<<<<<<< {file}')
+     os.chdir('../..')
+     print(f'<<<<<<<<<<<<<<<<< end root_dir dir {root_dir}')
      print(f'************************ cwd  before make {os.getcwd()}')
      os.chdir('./ai_darknet_lib/darknet_alex')
      # build/lib/src/darknet
