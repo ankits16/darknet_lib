@@ -1,0 +1,36 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Looking for a CUDA compiler failed with the following output:
+CMake Error at /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeDetermineCUDACompiler.cmake:179 (message):
+  Failed to find nvcc.
+
+  Compiler requires the CUDA toolkit.  Please set the CUDAToolkit_ROOT
+  variable.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/ankit/Downloads/darknet-master/build_release/CMakeFiles/CheckCUDA/CMakeFiles/CMakeOutput.log".
+See also "/Users/ankit/Downloads/darknet-master/build_release/CMakeFiles/CheckCUDA/CMakeFiles/CMakeError.log".
+
