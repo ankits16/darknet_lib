@@ -20,6 +20,8 @@ class Build(build_ext):
      os.system('echo **************** ankit pwd after')
      os.chdir('./src/darknet')
      os.system('pwd')
+     # build/lib/src/darknet
+     print(f'************* is darknet folder there before make {os.path.isdir("build/lib/src/darknet")}')
      print(f'************* is darknet there before make {os.path.isfile("darknet")}')
      os.system('echo **************** ankit pwd after')
      os.system('echo **************** ankit test')
