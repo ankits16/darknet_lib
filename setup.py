@@ -14,26 +14,20 @@ class Build(build_ext):
      build_ext_command.debug = 1
      protoc_command = ["make"]
      # protoc_command = ["echo **************** ankit"]
-     os.system('echo **************** ankit pwd before')
-     os.system('pwd')
-     os.system('echo **************** ankit pwd before')
-     os.system('echo **************** ankit pwd after')
+
+     print(f'************************ cwd  before make {os.getcwd()}')
      os.chdir('./src/darknet')
      os.system('pwd')
      # build/lib/src/darknet
      print(f'************* is darknet folder there before make {os.path.isdir("build/lib/src/darknet")}')
      print(f'************* is darknet there before make {os.path.isfile("darknet")}')
-     os.system('echo **************** ankit pwd after')
-     os.system('echo **************** ankit test')
+     print(f'************************ cwd after chage directory before make {os.getcwd()}')
      if subprocess.call(protoc_command) != 0:
          sys.exit(-1)
-
+     print(f'************************ cwd before chage directory after make {os.getcwd()}')
      print(f'************* is darknet there {os.path.isfile("darknet")}')
      os.chdir('../..')
-     os.system('echo **************** ankit pwd after make')
-     os.system('pwd')
-     os.system('echo **************** ankit pwd after make')
-     print("************* mini pwd after ")
+     print(f'************************ cwd after chage directory after make {os.getcwd()}')
      build_ext.run(self)
 
 
