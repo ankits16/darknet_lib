@@ -235,7 +235,7 @@ if os.name == "posix":
     cwd = os.path.dirname(__file__)
     print(cwd)
     # lib = CDLL(cwd + "/libdarknet.so", RTLD_GLOBAL)
-    lib = CDLL(cwd + "/darknet", RTLD_GLOBAL)
+    lib = CDLL(cwd + "/darknet_compiled", RTLD_GLOBAL)
 elif os.name == "nt":
     cwd = os.path.dirname(__file__)
     os.environ['PATH'] = cwd + ';' + os.environ['PATH']
