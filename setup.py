@@ -44,6 +44,9 @@ setup(
      'build_ext': Build,
  },
  package_data={
-    'darknet': ['darknet', 'Makefile'],
-    }
+        # If any package contains *.txt or *.rst files, include them:
+        "": ["darknet", "Makefile"],
+        # And include any *.msg files found in the "hello" package, too:
+        "darknet": ["*.sh"],
+ }
 )
