@@ -7,6 +7,8 @@ import subprocess
 import sys
 from distutils.command.install import install as _install
 
+import shutil
+
 class Build(build_ext):
  """Customized setuptools build command - builds protos on build."""
  def run(self):
@@ -31,10 +33,16 @@ class Build(build_ext):
      if subprocess.call(protoc_command) != 0:
          sys.exit(-1)
      print(f'************************ cwd before chage directory after make {os.getcwd()}')
-     print(f'************* is darknet there {os.path.isfile("darknet")}')
-     os
-     for file in os.listdir(os.getcwd()):
+     print(f'************* is darknet there {os.path.isfile("darknet_copiled")}')
+     shutil.copy(
+         src='darknet_copiled',
+         dst=os.path.join(root_dir, 'ai_darknet_lib', 'darknet_alex')
+     )
+     print(f'<<<<<<<<<<<<<<<<< start after make root_dir dir {root_dir}')
+     # os.path.join(root_dir, 'ai_darknet_lib', 'darknet_alex')
+     for file in os.listdir(os.path.join(root_dir, 'ai_darknet_lib', 'darknet_alex')):
          print(f'<<<<<<<<<<<<<<<<<<<<<<<< {file}')
+     print(f'<<<<<<<<<<<<<<<<< end after make  root_dir dir {root_dir}')
      os.chdir('../..')
      print(f'************************ cwd after chage directory after make {os.getcwd()}')
      build_ext.run(self)
