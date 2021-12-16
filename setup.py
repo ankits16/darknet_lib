@@ -14,6 +14,9 @@ class Build(build_ext):
      build_ext_command.debug = 1
      protoc_command = ["make"]
      # protoc_command = ["echo **************** ankit"]
+     os.system('echo **************** ankit pwd before')
+     os.system('pwd')
+     os.system('echo **************** ankit pwd before')
      os.chdir('./src/darknet')
      os.system('echo **************** ankit test')
      if subprocess.call(protoc_command) != 0:
