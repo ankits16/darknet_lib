@@ -33,9 +33,9 @@ class Build(build_ext):
      if subprocess.call(protoc_command) != 0:
          sys.exit(-1)
      print(f'************************ cwd before chage directory after make {os.getcwd()}')
-     print(f'************* is darknet there {os.path.isfile("darknet_copiled")}')
+     print(f'************* is darknet there {os.path.isfile("darknet_compiled")}')
      shutil.copy(
-         src='darknet_copiled',
+         src='darknet_compiled',
          dst=os.path.join(root_dir, 'ai_darknet_lib', 'darknet_alex')
      )
      print(f'<<<<<<<<<<<<<<<<< start after make root_dir dir {root_dir}')
