@@ -3,7 +3,7 @@ CUDNN=0
 CUDNN_HALF=0
 OPENCV=0
 AVX=1
-OPENMP=0
+OPENMP=1
 LIBSO=0
 ZED_CAMERA=0
 ZED_CAMERA_v2_8=0
@@ -77,7 +77,7 @@ CPP=g++ -std=c++11
 NVCC=nvcc
 OPTS=-Ofast
 LDFLAGS= -lm -pthread
-COMMON= -Iinclude/ -I3rdparty/stb/include
+COMMON= -Iinclude/ -I3rdparty/stb/include -I/usr/local/include
 CFLAGS=-Wall -Wfatal-errors -Wno-unused-result -Wno-unknown-pragmas -fPIC
 
 ifeq ($(DEBUG), 1)
@@ -110,7 +110,8 @@ ifeq ($(OPENMP), 1)
 	else
 		CFLAGS+= -fopenmp
 	endif
-LDFLAGS+= -lgomp
+# LDFLAGS+= -lgomp
+LDFLAGS+= -L/usr/local/lib -lomp
 endif
 
 ifeq ($(GPU), 1)
